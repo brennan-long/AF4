@@ -4,17 +4,42 @@
              x:Class="Notes.Views.NotesPage"
              Title="Notes">
     <!-- Layout children vertically -->
-    <StackLayout Margin="20">
-        <Editor x:Name="editor"
-                Placeholder="Enter your note"
-                HeightRequest="100" />
+    <StackLayout 
+        BackgroundColor="DarkBlue">
+
+        <Label Text="Welcome To Our Project"
+               FontSize="25"
+               TextColor="White"
+               BackgroundColor="DarkBlue"/>
+        <Label
+            FontSize="15"
+            Text="Please Choose an Aircraft from the drop down menu and select whether you would like to takeoff or landing then proceed to the Location Page"
+          TextColor="White"
+               BackgroundColor="DarkBlue"
+          <Picker Title="Select an Aircraft">
+                <Picker.Items>
+                 <x:String>C-5</x:String>
+                </Picker.Items>
+            </Picker>
+            
+               
+               
+               />
+
         <!-- Layout children in two columns -->
+        <Label 
+            
+                BackgroundColor="White"
+/>
         <Grid ColumnDefinitions="*,*">
-            <Button Text="Save"
+            <Button Text="Takeoff"
                     Clicked="OnSaveButtonClicked" />
             <Button Grid.Column="1"
-                    Text="Delete"
+                    Text="Landing"
                     Clicked="OnDeleteButtonClicked"/>
+
+            
         </Grid>
+        <Image Source="HomePic.jfif"/>
     </StackLayout>
 </ContentPage>
