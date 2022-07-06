@@ -5,41 +5,48 @@
              Title="Notes">
     <!-- Layout children vertically -->
     <StackLayout 
-        BackgroundColor="DarkBlue">
+        BackgroundColor="DarkBlue"
+        Spacing="15">
 
         <Label Text="Welcome To Our Project"
-               FontSize="25"
+               FontSize="27"
                TextColor="White"
                BackgroundColor="DarkBlue"/>
         <Label
-            FontSize="15"
+            FontSize="20"
             Text="Please Choose an Aircraft from the drop down menu and select whether you would like to takeoff or landing then proceed to the Location Page"
           TextColor="White"
                BackgroundColor="DarkBlue"
-          <Picker Title="Select an Aircraft">
+            />
+        
+
+        <StackLayout Margin="0"
+                     >
+            <Label Text=" Aircraft Selection"
+                   TextColor="White"
+                   FontSize="25"/>
+            <Picker Title=" Select"
+                    TitleColor="White">
                 <Picker.Items>
-                 <x:String>C-5</x:String>
+                    <x:String>C-5</x:String>
+                    <x:String>C-17</x:String>
+                    <x:String>C-130</x:String>
+                    <x:String>F-15</x:String>
+                    <x:String>E-8</x:String>
                 </Picker.Items>
             </Picker>
-            
-               
-               
-               />
 
-        <!-- Layout children in two columns -->
-        <Label 
-            
-                BackgroundColor="White"
-/>
-        <Grid ColumnDefinitions="*,*">
-            <Button Text="Takeoff"
+            <Grid HeightRequest="60"
+                ColumnDefinitions="*,*">
+                <Button Text="Takeoff"
                     Clicked="OnSaveButtonClicked" />
-            <Button Grid.Column="1"
+                <Button Grid.Column="1"
                     Text="Landing"
                     Clicked="OnDeleteButtonClicked"/>
 
-            
-        </Grid>
-        <Image Source="HomePic.jfif"/>
+            </Grid>
+            <Image 
+                Source="HomePic.jfif"/>
+        </StackLayout>
     </StackLayout>
 </ContentPage>
